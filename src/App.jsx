@@ -6,7 +6,7 @@ import Books from "./pages/Books";
 import { books } from "./data";
 import BookInfo from "./pages/BookInfo";
 import Cart from "./pages/Cart";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -35,9 +35,9 @@ function App() {
     return counter
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  // useEffect(() => {
+  //   console.log(cart);
+  // }, [cart]);
 
   return (
     <Router>

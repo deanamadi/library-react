@@ -12,9 +12,11 @@ const Book = ({ book }) => {
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
-      if (mountedRef) {
-        setImg(image);
-      }
+      setTimeout(() => {
+        if (mountedRef) {
+          setImg(image);
+        }
+      }, 150);
     };
     return () => {
       mountedRef.current = false;
